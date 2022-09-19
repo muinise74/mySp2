@@ -1,4 +1,4 @@
-package com.example.mysp2.hello.vo;
+package com.example.mysp2.web.hello.vo;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

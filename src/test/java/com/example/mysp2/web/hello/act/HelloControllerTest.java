@@ -1,4 +1,4 @@
-package com.example.mysp2.hello.web;
+package com.example.mysp2.web.hello.act;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

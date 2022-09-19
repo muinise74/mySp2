@@ -1,6 +1,6 @@
-package com.example.mysp2.hello.web;
+package com.example.mysp2.web.hello.act;
 
-import com.example.mysp2.hello.vo.HelloResponse;
+import com.example.mysp2.web.hello.vo.HelloResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
