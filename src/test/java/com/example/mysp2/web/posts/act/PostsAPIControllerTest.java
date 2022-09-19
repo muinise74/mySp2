@@ -17,6 +17,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -45,6 +46,7 @@ public class PostsAPIControllerTest {
         String title = "title";
         String content = "content";
         String author = "author";
+        LocalDateTime now = LocalDateTime.now();
 
         PostsSaveReqVO psrv = PostsSaveReqVO.builder().title(title).content(content).author(author).build();
 
@@ -56,8 +58,11 @@ public class PostsAPIControllerTest {
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
         List<Posts> all = pr.findAll();
+        System.out.println(">>>>> createdDate : " + all.get(0).getCreatedDate() + ", modifieddate : " + all.get(0).getModifiedDate());
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
+        assertThat(all.get(0).getCreatedDate()).isAfter(now);
+        assertThat(all.get(0).getModifiedDate()).isAfter(now);
 
     }
 
