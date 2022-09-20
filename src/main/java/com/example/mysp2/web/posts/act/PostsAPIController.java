@@ -28,4 +28,10 @@ public class PostsAPIController {
         return ps.findById(id);
     }
 
+    @PostMapping("/api/v1/postsDelete/{id}")
+    public Long deleteyId (@PathVariable Long id) {
+        ps.deleteById(id);
+        return id;
+    }
+
 }
