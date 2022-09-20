@@ -3,7 +3,7 @@ package com.example.mysp2.web.posts.act;
 import com.example.mysp2.web.posts.vo.PostsResponseVO;
 import com.example.mysp2.web.posts.vo.PostsSaveReqVO;
 import com.example.mysp2.web.posts.vo.PostsUpdateReqVO;
-import com.example.mysp2.web.service.PostsService;
+import com.example.mysp2.web.posts.service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
