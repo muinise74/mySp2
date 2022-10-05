@@ -31,6 +31,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mustache
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mustache', version: '2.6.8'
 
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-oauth2-client
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-client', version: '2.6.8'
+
 }
 
 tasks.named('test') {
