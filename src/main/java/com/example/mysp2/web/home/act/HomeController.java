@@ -1,5 +1,6 @@
 package com.example.mysp2.web.home.act;
 
+import com.example.mysp2.config.auth.LoginUser;
 import com.example.mysp2.config.auth.dto.SessionUser;
 import com.example.mysp2.web.posts.service.PostsService;
 import lombok.RequiredArgsConstructor;
@@ -17,10 +18,8 @@ public class HomeController {
     private final HttpSession httpSession;
 
     @RequestMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts",ps.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if (user != null) {
             model.addAttribute("LoginUserName",user.getName());
