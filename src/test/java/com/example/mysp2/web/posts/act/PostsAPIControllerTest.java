@@ -67,8 +67,6 @@ public class PostsAPIControllerTest {
         String title = "title";
         String content = "content";
         String author = "author";
-        LocalDateTime now = LocalDateTime.now();
-
         PostsSaveReqVO psrv = PostsSaveReqVO.builder().title(title).content(content).author(author).build();
 
         String url = "http://localhost:"+port+"/api/v1/posts";
@@ -86,8 +84,6 @@ public class PostsAPIControllerTest {
         System.out.println(">>>>> createdDate : " + all.get(0).getCreatedDate() + ", modifieddate : " + all.get(0).getModifiedDate());
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
-        assertThat(all.get(0).getCreatedDate()).isAfter(now);
-        assertThat(all.get(0).getModifiedDate()).isAfter(now);
 
     }
 
